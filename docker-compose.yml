@@ -1,0 +1,14 @@
+services:
+  dat1-runtime:
+    image: public.ecr.aws/dat1/dat1/runtime:0.1
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./example:/app
+    deploy:
+       resources:
+         reservations:
+           devices:
+             - driver: nvidia
+               capabilities: [gpu]
