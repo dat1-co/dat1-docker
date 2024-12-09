@@ -1,6 +1,6 @@
 services:
   dat1-runtime:
-    image: public.ecr.aws/dat1/dat1/runtime:0.2
+    image: public.ecr.aws/dat1/dat1/runtime:0.6.0
     platform: linux/amd64
     build: .
     ports:
