@@ -2,7 +2,7 @@ from fastapi import Request, FastAPI
 from vllm import LLM, SamplingParams
 import os
 
-llm = LLM(model=os.path.expanduser('./'), load_format="safetensors", enforce_eager=True)
+llm = LLM(model=os.path.expanduser('./'), load_format="safetensors", enforce_eager=True, gpu_memory_utilization=0.95, quantization='gptq', max_model_len=4096)
 
 app = FastAPI()
 
