@@ -17,12 +17,15 @@ RUN pip install opencv-python
 RUN pip install timm
 RUN pip install unsloth
 RUN pip install diffusers
-RUN CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python==0.3.4 --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124
+RUN pip install llama-cpp-python==0.3.4 --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124
 RUN pip install torch==2.5.1 vllm==0.6.4
 RUN pip install loadimg
 RUN pip install uvloop
 RUN pip install ujson
 RUN pip install boto3
+RUN pip install sse_starlette
+RUN pip install starlette-context
+RUN pip install pydantic-settings
 
 WORKDIR /app
 ENTRYPOINT ["uvicorn", "handler:app", "--host", "0.0.0.0"]
