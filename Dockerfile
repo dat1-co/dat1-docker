@@ -17,7 +17,7 @@ RUN pip install opencv-python
 RUN pip install timm
 RUN pip install unsloth
 RUN pip install diffusers
-RUN pip install llama-cpp-python==0.3.4 --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124
+RUN pip install llama-cpp-python==0.2.90 --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124
 RUN pip install torch==2.5.1 vllm==0.6.4
 RUN pip install loadimg
 RUN pip install uvloop
